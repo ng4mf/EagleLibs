@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -173,11 +173,29 @@
 <wire x1="2.54" y1="5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
-<pin name="1" x="5.08" y="2.54" visible="off" length="short" rot="R180"/>
-<pin name="2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
-<pin name="3" x="5.08" y="-2.54" visible="off" length="short" rot="R180"/>
+<pin name="1" x="5.08" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="2" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="3" x="5.08" y="-2.54" visible="pad" length="short" rot="R180"/>
 <text x="-2.54" y="-5.08" size="1.016" layer="95" rot="R90">&gt;NAME</text>
 <text x="-2.54" y="5.08" size="1.016" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="1X10">
+<wire x1="-2.54" y1="15.24" x2="2.54" y2="15.24" width="0.254" layer="94"/>
+<wire x1="2.54" y1="15.24" x2="2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-12.7" x2="-2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-12.7" x2="-2.54" y2="15.24" width="0.254" layer="94"/>
+<pin name="7" x="5.08" y="5.08" visible="pad" length="short" rot="R180"/>
+<pin name="6" x="5.08" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="5" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="4" x="5.08" y="-2.54" visible="pad" length="short" rot="R180"/>
+<pin name="3" x="5.08" y="-5.08" visible="pad" length="short" rot="R180"/>
+<pin name="2" x="5.08" y="-7.62" visible="pad" length="short" rot="R180"/>
+<pin name="1" x="5.08" y="-10.16" visible="pad" length="short" rot="R180"/>
+<text x="0" y="0" size="1.27" layer="95" rot="R90">&gt;NAME</text>
+<text x="0" y="-10.16" size="1.27" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="P$1" x="5.08" y="7.62" visible="off" length="short" rot="R180"/>
+<pin name="P$2" x="5.08" y="10.16" visible="off" length="short" rot="R180"/>
+<pin name="P$3" x="5.08" y="12.7" visible="off" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -202,7 +220,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="1X03">
+<deviceset name="1X03" prefix="H">
 <gates>
 <gate name="G$1" symbol="1X03" x="0" y="0"/>
 </gates>
