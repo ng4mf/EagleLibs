@@ -103,8 +103,9 @@
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 </symbol>
 <symbol name="VEE">
-<pin name="P$1" x="0" y="-2.54" visible="off" length="short" rot="R90"/>
-<text x="2.54" y="-2.54" size="1.27" layer="94">VEE</text>
+<pin name="VEE" x="0" y="0" visible="off" length="short" direction="sup" rot="R270"/>
+<text x="-1.524" y="-4.826" size="1.27" layer="97">VEE</text>
+<circle x="0" y="-2.54" radius="0.635" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -195,6 +196,18 @@
 <deviceset name="GND2">
 <gates>
 <gate name="G$1" symbol="GND2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VEE">
+<gates>
+<gate name="G$1" symbol="VEE" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">

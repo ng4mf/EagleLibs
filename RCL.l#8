@@ -153,16 +153,16 @@
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 </package>
 <package name="DIP0.1-10PIN">
-<pad name="P$1" x="0" y="-10.16" drill="1.016" shape="square"/>
-<pad name="P$2" x="0" y="-7.62" drill="1.016"/>
-<pad name="P$3" x="0" y="-5.08" drill="1.016"/>
-<pad name="P$4" x="0" y="-2.54" drill="1.016"/>
-<pad name="P$5" x="0" y="0" drill="1.016"/>
-<pad name="P$6" x="0" y="2.54" drill="1.016"/>
-<pad name="P$7" x="0" y="5.08" drill="1.016"/>
-<pad name="P$8" x="0" y="7.62" drill="1.016"/>
-<pad name="P$9" x="0" y="10.16" drill="1.016"/>
-<pad name="P$10" x="0" y="12.7" drill="1.016"/>
+<pad name="GND" x="0" y="-10.16" drill="1.016" shape="square"/>
+<pad name="1" x="0" y="-7.62" drill="1.016"/>
+<pad name="2" x="0" y="-5.08" drill="1.016"/>
+<pad name="3" x="0" y="-2.54" drill="1.016"/>
+<pad name="4" x="0" y="0" drill="1.016"/>
+<pad name="5" x="0" y="2.54" drill="1.016"/>
+<pad name="6" x="0" y="5.08" drill="1.016"/>
+<pad name="7" x="0" y="7.62" drill="1.016"/>
+<pad name="8" x="0" y="10.16" drill="1.016"/>
+<pad name="9" x="0" y="12.7" drill="1.016"/>
 <wire x1="-1.27" y1="15.24" x2="1.27" y2="15.24" width="0.127" layer="21"/>
 <wire x1="1.27" y1="15.24" x2="1.27" y2="-12.7" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-12.7" x2="-1.27" y2="-12.7" width="0.127" layer="21"/>
@@ -262,6 +262,18 @@
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RSIP_DIP0.1_1X10" prefix="RS">
+<gates>
+<gate name="G$1" symbol="R-SIP10" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIP0.1-10PIN">
 <technologies>
 <technology name=""/>
 </technologies>

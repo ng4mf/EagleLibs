@@ -332,7 +332,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="RSIP_DIP0.1_1X10" prefix="RS">
+<deviceset name="RSIP_DIP0.1_1X10" prefix="RS" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="R-SIP10" x="0" y="0"/>
 </gates>
