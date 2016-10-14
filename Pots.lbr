@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -91,6 +91,18 @@
 <text x="2.032" y="0.508" size="1.27" layer="51" ratio="10">1</text>
 <text x="-2.032" y="0.508" size="1.27" layer="51" ratio="10">3</text>
 </package>
+<package name="3214X">
+<smd name="1" x="-2.54" y="1.27" dx="1.905" dy="1.27" layer="1"/>
+<smd name="3" x="-2.54" y="-1.27" dx="1.905" dy="1.27" layer="1"/>
+<smd name="2" x="2.54" y="0" dx="1.905" dy="2.0066" layer="1"/>
+<wire x1="-1.7653" y1="2.413" x2="1.7653" y2="2.413" width="0.127" layer="21"/>
+<wire x1="1.7653" y1="2.413" x2="1.7653" y2="-2.413" width="0.127" layer="21"/>
+<wire x1="1.7653" y1="-2.413" x2="-1.7653" y2="-2.413" width="0.127" layer="21"/>
+<wire x1="-1.7653" y1="-2.413" x2="-1.7653" y2="2.413" width="0.127" layer="21"/>
+<circle x="0.635" y="-1.1938" radius="0.5588" width="0.127" layer="21"/>
+<text x="-1.27" y="2.54" size="0.508" layer="21">&gt;NAME</text>
+<text x="-1.27" y="1.27" size="0.508" layer="21">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="POT">
@@ -119,16 +131,26 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="POT">
+<deviceset name="POT" prefix="P" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="POT" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="B64Y">
+<device name="P0.1" package="B64Y">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="E" pad="E"/>
 <connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name="DIP"/>
+</technologies>
+</device>
+<device name="SMD" package="3214X">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="E" pad="3"/>
+<connect gate="G$1" pin="S" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
