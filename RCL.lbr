@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -147,8 +147,8 @@
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
 <smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="0.762" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="0.762" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 </package>
@@ -243,6 +243,23 @@
 <text x="-2.921" y="10.541" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-0.635" y="7.493" size="1.27" layer="27" ratio="10" rot="R270">&gt;VALUE</text>
 </package>
+<package name="0603-POL">
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="25"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="25"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="25"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="25"/>
+<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
+<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="-0.635" y="0.635" size="0.762" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="0.762" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+<wire x1="-1.0922" y1="-0.7112" x2="-0.5842" y2="-0.7112" width="0.127" layer="21"/>
+<wire x1="0.635" y1="-0.7366" x2="1.143" y2="-0.7366" width="0.127" layer="21"/>
+<wire x1="0.889" y1="-0.6096" x2="0.889" y2="-0.8636" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="R">
@@ -266,9 +283,9 @@
 <text x="-2.921" y="1.524" size="1.778" layer="95" rot="R90">&gt;NAME</text>
 <text x="2.159" y="1.524" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <rectangle x1="-2.794" y1="-0.254" x2="1.27" y2="0.254" layer="94" rot="R90"/>
-<rectangle x1="-3.81" y1="-0.254" x2="0.254" y2="0.254" layer="94" rot="R90"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="2" x="2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<rectangle x1="-4.064" y1="-0.254" x2="0" y2="0.254" layer="94" rot="R90"/>
 </symbol>
 <symbol name="R-SIP10">
 <wire x1="-5.08" y1="15.24" x2="2.54" y2="15.24" width="0.254" layer="94"/>
@@ -320,6 +337,20 @@
 <wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="98"/>
 <wire x1="-2.54" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="98"/>
 <wire x1="-2.54" y1="-10.16" x2="2.54" y2="-10.16" width="0.254" layer="98"/>
+</symbol>
+<symbol name="C-POL">
+<wire x1="1.524" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<text x="-1.397" y="1.524" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="3.683" y="1.524" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<rectangle x1="-1.27" y1="-0.254" x2="2.794" y2="0.254" layer="94" rot="R90"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
+<pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
+<wire x1="1.27" y1="0" x2="1.016" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="2.032" y2="0.254" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.016" x2="2.794" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="2.032" x2="-1.27" y2="-2.032" width="0.254" layer="94" curve="-82.371883"/>
+<wire x1="-2.54" y1="0" x2="-0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.524" y2="0" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -441,6 +472,24 @@
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="C-POL" prefix="C">
+<gates>
+<gate name="G$1" symbol="C-POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-T" package="0603-POL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CAP-TYPE" value="TANTALUM" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -58,8 +58,22 @@
 <library>
 <packages>
 <package name="PJ-037A">
-<pad name="P$1" x="6" y="0" drill="5.9944" shape="square"/>
-<pad name="P$2" x="0" y="0" drill="4.9784" shape="square"/>
+<wire x1="-4.3" y1="4" x2="4.3" y2="4" width="0.127" layer="21"/>
+<wire x1="4.3" y1="4" x2="4.3" y2="-5.2" width="0.127" layer="21"/>
+<wire x1="-4.3" y1="4" x2="-4.3" y2="-5.2" width="0.127" layer="21"/>
+<wire x1="-4.3" y1="-5.2" x2="4.3" y2="-5.2" width="0.127" layer="21"/>
+<text x="-2.2" y="0" size="1" layer="21">&gt;NAME</text>
+<text x="-2.4" y="-1.4" size="1" layer="21">&gt;VALUE</text>
+<hole x="0" y="2.5" drill="1"/>
+<hole x="0" y="-2.5" drill="1"/>
+<text x="-1.27" y="-5.08" size="0.4" layer="21">Cord Insert</text>
+<wire x1="-1.905" y1="-5.08" x2="-1.905" y2="-4.445" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-4.445" x2="1.905" y2="-4.445" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-4.445" x2="1.905" y2="-5.08" width="0.127" layer="21"/>
+<smd name="2" x="-4.3" y="0.5" dx="2.2" dy="2.2" layer="1"/>
+<smd name="3" x="-4.3" y="-4" dx="2.2" dy="2.2" layer="1"/>
+<smd name="1" x="4.3" y="0.5" dx="2.2" dy="2.2" layer="1"/>
+<smd name="1." x="4.3" y="-4" dx="2.2" dy="2.2" layer="1"/>
 </package>
 <package name="RAPC722BK">
 <wire x1="0" y1="0" x2="0" y2="8.89" width="0.127" layer="21"/>
@@ -87,6 +101,24 @@
 <text x="0" y="6.35" size="1.27" layer="21">&gt;NAME</text>
 <text x="0" y="3.81" size="1.27" layer="21">&gt;VALUE</text>
 </package>
+<package name="PJ-002BH-SMT">
+<text x="-2.54" y="2.27" size="1.27" layer="21">&gt;NAME</text>
+<text x="-2.54" y="-2.27" size="1.27" layer="21">&gt;VALUE</text>
+<wire x1="-7" y1="5.07" x2="7.6" y2="5.07" width="0.127" layer="21"/>
+<wire x1="7.6" y1="5.07" x2="7.6" y2="-3.93" width="0.127" layer="21"/>
+<wire x1="7.6" y1="-3.93" x2="-7" y2="-3.93" width="0.127" layer="21"/>
+<wire x1="-7" y1="-3.93" x2="-7" y2="5.07" width="0.127" layer="21"/>
+<hole x="-2" y="0.57" drill="1.6002"/>
+<hole x="2.5" y="0.57" drill="1.8034"/>
+<text x="6.985" y="-0.635" size="0.4064" layer="21" rot="R90">Cord Insert</text>
+<wire x1="7.62" y1="3.175" x2="6.35" y2="3.175" width="0.127" layer="21"/>
+<wire x1="6.35" y1="3.175" x2="6.35" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="6.35" y1="-1.27" x2="7.62" y2="-1.27" width="0.127" layer="21"/>
+<smd name="1" x="-2" y="6.305" dx="2.8" dy="2.4" layer="1"/>
+<smd name="1." x="4.1" y="6.35" dx="2.8" dy="2.4" layer="1"/>
+<smd name="2" x="-2" y="-5.08" dx="2.8" dy="2.4" layer="1"/>
+<smd name="3" x="4.1" y="-5.08" dx="2.8" dy="2.4" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SINGLE-LINE">
@@ -111,6 +143,24 @@
 <connects>
 <connect gate="G$1" pin="V+" pad="1"/>
 <connect gate="G$1" pin="V-" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-TR" package="PJ-002BH-SMT">
+<connects>
+<connect gate="G$1" pin="V+" pad="2"/>
+<connect gate="G$1" pin="V-" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="A" package="PJ-037A">
+<connects>
+<connect gate="G$1" pin="V+" pad="2"/>
+<connect gate="G$1" pin="V-" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
